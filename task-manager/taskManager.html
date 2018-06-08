@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task Manager</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    </head>
+<body>
+ 
+ 
+  <header>
+      <div class="jumbotron myJumbotron">
+  <div class="container">
+    <h1 class="display-4">Task Manager</h1>
+    <p class="lead">Add your tasks here </p>
+  </div>
+</div>
+  </header>
+  
+  
+  <div class="container">
+   <div class="form-group row ">
+    <label for="email" class="col-sm-2 col-form-label">Task Title</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control myInputBox" id="taskTitle" placeholder="Enter your task...">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="dueDate" class="col-sm-2 col-form-label">Due Date</label>
+    <div class="col-sm-10">
+      <input type="Date" class="form-control myInputBox" id="taskDate" >
+    </div>
+  </div>
+  <div class="form-group row">
+  <button type="button" class="btn btn-outline-info btn-block myButton" onclick = "controller.add()">Add</button>
+   </div>
+   
+   <div class="form-check form-check-inline">
+      <select class="custom-select mr-sm-2 myInputBox" id="filterOption" onchange="controller.filterTasks()">
+        <option selected>Choose...</option>
+        <option >ALL</option>
+        <option >IN-PROGRESS</option>
+        <option >COMPLETED</option>
+      </select>
+    </div>
+<div class="form-check form-check-inline">
+  <button type="button" class="btn btn-outline-secondary" onclick = "controller.delete()">Delete</button>
+</div>
+   <div class="form-check form-check-inline">
+  <button type="button" class="btn btn-outline-secondary" onclick = "controller.changeStatus()">Change Status</button>
+</div>
+    
+        
+<table id="tasksview" class="table table-striped mytable"></table><br>
+
+    <script src="js/script.js" type="text/javascript"></script>
+    
+    </div>  
+</body>
+</html>

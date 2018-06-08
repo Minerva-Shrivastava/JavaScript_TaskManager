@@ -1,0 +1,19 @@
+.myInputBox{
+    width: 500px;
+}
+.myButton{
+    margin-left: 1%;
+    width: 61%;
+    cursor: pointer;    
+}
+
+.myJumbotron{
+    height: 190px;
+}
+.mytable{
+    margin-top: 2%;
+    width: 750px;
+}
+.mytable{
+	max-height: 100px;
+}
